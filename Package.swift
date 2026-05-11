@@ -1,5 +1,5 @@
 // swift-tools-version: 5.9
-// MediaNetRenderer — version 0.0.10
+// MediaNetRenderer — version 0.0.11
 
 import PackageDescription
 
@@ -21,13 +21,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MediaNetRendererCore",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.10/MediaNetRendererCore.xcframework.zip",
-            checksum: "ace5799c26df79d57edd5b0144c991a35444cb0a106a29e146377ac31a3ffdcc"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.11/MediaNetRendererCore.xcframework.zip",
+            checksum: "6c0b38f9606dc010a515f529fcef405784253be310371578000e1912d4befdb3"
         ),
         .binaryTarget(
             name: "MediaNetRendererPrebid",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.10/MediaNetRendererPrebid.xcframework.zip",
-            checksum: "e13bde90aa28b06d17e9e1d5646330c1f86a9188b41c85ccc57db9868b871f0d"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.11/MediaNetRendererPrebid.xcframework.zip",
+            checksum: "0ffa8c2bca2c5e6edd14a12c77cce95e63cab6e2206a4172707f7795374a54a1"
         ),
     ]
 )
