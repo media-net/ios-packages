@@ -1,5 +1,5 @@
 // swift-tools-version: 5.9
-// MediaNetRenderer — version 0.0.13
+// MediaNetRenderer — version 0.0.14
 
 import PackageDescription
 
@@ -25,13 +25,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MediaNetRendererCore",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.13/MediaNetRendererCore.xcframework.zip",
-            checksum: "be92072a7f54f2b7fef64b898b2b851376d1c26f241b1c65780efb995dc6f5e1"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.14/MediaNetRendererCore.xcframework.zip",
+            checksum: "ad1f48b5740f388ba072a6b393c58ca0a510576f98524a90f35c2d9401624e72"
         ),
         .binaryTarget(
             name: "MediaNetRendererPrebid",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.13/MediaNetRendererPrebid.xcframework.zip",
-            checksum: "bf9865990ee0c7ad9a933925131627688fa59e6f36f48c838a5f2d608ef66ffc"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.14/MediaNetRendererPrebid.xcframework.zip",
+            checksum: "732d7561a4db31365a27fbc128cbf9768ccb561b0ac2e2bf1e723855d4cbbe14"
         ),
         // OMSDK is referenced by Core via @_implementationOnly import. SPM
         // cannot wire binaryTarget→binaryTarget dependencies, so we list
@@ -40,8 +40,8 @@ let package = Package(
         // 'OMSDK_Static_Medianet'" the moment they integrate the package.
         .binaryTarget(
             name: "OMSDK_Static_Medianet",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.13/OMSDK_Static_Medianet.xcframework.zip",
-            checksum: "6d130c3c1deedbb07f9daa8378a0ec119d742ff0be2c381c45545b1192d929f0"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.14/OMSDK_Static_Medianet.xcframework.zip",
+            checksum: "e9bfdcc55a78e03a41901ceb688a4e2805f217460a0e92835226485d0161096e"
         ),
     ]
 )
