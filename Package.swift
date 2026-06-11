@@ -17,7 +17,25 @@ let package = Package(
                 "OMSDK_Medianet",
                 "MediaNetAdSDKGoogleAdsLink"
             ]
-        )
+        ),
+        // MNR-RELEASE-START — managed by ios-render-plugin/release-xcframework.sh, do not edit by hand (0.0.18)
+        .library(
+            name: "MediaNetRendererCore",
+            targets: ["MediaNetRendererCore", "OMSDK_Medianet"]
+        ),
+        .library(
+            name: "MediaNetRendererPrebid",
+            targets: ["MediaNetRendererPrebid", "MediaNetRendererCore", "OMSDK_Medianet"]
+        ),
+        .library(
+            name: "MediaNetRendererAdSDK",
+            targets: ["MediaNetRendererAdSDK", "MediaNetRendererCore", "OMSDK_Medianet"]
+        ),
+        .library(
+            name: "MediaNetRenderer",
+            targets: ["MediaNetRendererCore", "MediaNetRendererPrebid", "OMSDK_Medianet"]
+        ),
+        // MNR-RELEASE-END
     ],
     dependencies: [
         .package(
@@ -51,6 +69,23 @@ let package = Package(
                 .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
             ],
             path: "Sources/MediaNetAdSDKGoogleAdsLink"
-        )
+        ),
+        // MNR-RELEASE-START — managed by ios-render-plugin/release-xcframework.sh, do not edit by hand (0.0.18)
+        .binaryTarget(
+            name: "MediaNetRendererCore",
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.18/MediaNetRendererCore.xcframework.zip",
+            checksum: "9c95322af130a07b83845572e281423bf6107ae38737cb14d06a3c67b36549fd"
+        ),
+        .binaryTarget(
+            name: "MediaNetRendererPrebid",
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.18/MediaNetRendererPrebid.xcframework.zip",
+            checksum: "c7c1f894c80a8e5b3d626b9ee4d6b7c57c7c9342386907aa410e3c084b759851"
+        ),
+        .binaryTarget(
+            name: "MediaNetRendererAdSDK",
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.18/MediaNetRendererAdSDK.xcframework.zip",
+            checksum: "397ec2878a20347a916ba8bcf4fbf50f513ee9ac5bdd820d4a420ecab4c99a71"
+        ),
+        // MNR-RELEASE-END
     ]
 )
