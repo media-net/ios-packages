@@ -1,48 +1,56 @@
 // swift-tools-version: 5.9
-// MediaNetRenderer — version 0.0.16
+// MediaNetAdSDK — version 0.3.0
 
 import PackageDescription
 
 let package = Package(
-    name: "MediaNetRenderer",
+    name: "MediaNetAdSDK",
     platforms: [
-        .iOS(.v14)
+        .iOS(.v13)
     ],
     products: [
-        // Umbrella product — pulls Core + Prebid + OMSDK in one ref.
-        // This is the integration the Google Doc guide recommends.
         .library(
-            name: "MediaNetRenderer",
-            targets: ["MediaNetRendererCore", "MediaNetRendererPrebid", "OMSDK_Medianet"]
-        ),
-        // Core-only product — for non-Prebid integrations. Still ships
-        // OMSDK alongside since Core's .private.swiftinterface imports it.
-        .library(
-            name: "MediaNetRendererCore",
-            targets: ["MediaNetRendererCore", "OMSDK_Medianet"]
-        ),
+            name: "MediaNetAdSDK",
+            targets: [
+                "MediaNetAdSDK",
+                "MNPrebidMobile",
+                "OMSDK_Medianet",
+                "MediaNetAdSDKGoogleAdsLink"
+            ]
+        )
+    ],
+    dependencies: [
+        .package(
+            url: "https://github.com/googleads/swift-package-manager-google-mobile-ads",
+            from: "12.3.0"
+        )
     ],
     targets: [
         .binaryTarget(
-            name: "MediaNetRendererCore",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.16/MediaNetRendererCore.xcframework.zip",
-            checksum: "689d5e1e8cb6c8897a0632462928838a5cf839ee48715aa2c214b11febf37ce2"
+            name: "MediaNetAdSDK",
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.3.0/MediaNetAdSDK.xcframework.zip",
+            checksum: "a383d1a5b19a00e1d7bb44beab1d9ab424a91d7cc3c4bcd325bab70c40b2f5fa"
         ),
+        // Namespaced Prebid Mobile fork the wrapper links. Hosted here because a
+        // binary target cannot bundle another binary's dependencies.
         .binaryTarget(
-            name: "MediaNetRendererPrebid",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.16/MediaNetRendererPrebid.xcframework.zip",
-            checksum: "a54d9fd0ab21a134e0cb7cc61a7254d4eb9fc66bf06eee0e10fe9ff4bdd6d74a"
+            name: "MNPrebidMobile",
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.3.0/MNPrebidMobile.xcframework.zip",
+            checksum: "8f319e8ffd090e41b8fa95b22570f130b3bedcd774b74218c66bca818fc16c55"
         ),
-        // OMSDK is referenced by Core via @_implementationOnly import. SPM
-        // cannot wire binaryTarget→binaryTarget dependencies, so we list
-        // OMSDK alongside Core in every product instead. Without this slot
-        // SPM consumers hit "unable to resolve module dependency:
-        // 'OMSDK_Medianet'" the moment they integrate the package. This is the
-        // external, independently-versioned dynamic OMID artifact.
+        // Dynamic IAB OMSDK build (independently versioned, already hosted).
         .binaryTarget(
             name: "OMSDK_Medianet",
             url: "https://github.com/media-net/ios-packages/releases/download/omsdk-medianet-1.5.5/OMSDK_Medianet.xcframework.zip",
             checksum: "2150099930947c9e4ae8c15d054396d984b3983738f0b80e743a9806a5da120a"
         ),
+        // Carries the GoogleMobileAds package edge into the product link graph.
+        .target(
+            name: "MediaNetAdSDKGoogleAdsLink",
+            dependencies: [
+                .product(name: "GoogleMobileAds", package: "swift-package-manager-google-mobile-ads")
+            ],
+            path: "Sources/MediaNetAdSDKGoogleAdsLink"
+        )
     ]
 )
