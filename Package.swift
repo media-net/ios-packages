@@ -18,7 +18,7 @@ let package = Package(
                 "MediaNetAdSDKGoogleAdsLink"
             ]
         ),
-        // MNR-RELEASE-START — managed by ios-render-plugin/release-xcframework.sh, do not edit by hand (0.0.21)
+        // MNR-RELEASE-START — managed by ios-render-plugin/release-xcframework.sh, do not edit by hand (0.0.22)
         .library(
             name: "MediaNetRendererCore",
             targets: ["MediaNetRendererCore", "OMSDK_Medianet"]
@@ -70,21 +70,21 @@ let package = Package(
             ],
             path: "Sources/MediaNetAdSDKGoogleAdsLink"
         ),
-        // MNR-RELEASE-START — managed by ios-render-plugin/release-xcframework.sh, do not edit by hand (0.0.21)
+        // MNR-RELEASE-START — managed by ios-render-plugin/release-xcframework.sh, do not edit by hand (0.0.22)
         .binaryTarget(
             name: "MediaNetRendererCore",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.21/MediaNetRendererCore.xcframework.zip",
-            checksum: "ec51328114df4607d173c7c8c45914f63a994630694c75a5b120ab0353c1e404"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.22/MediaNetRendererCore.xcframework.zip",
+            checksum: "bd15d28af82d623227b4bd023b4baf43029579c61d5254129713ca728c9678d6"
         ),
         .binaryTarget(
             name: "MediaNetRendererPrebid",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.21/MediaNetRendererPrebid.xcframework.zip",
-            checksum: "4037cb4b3741cc186b683ce2e0efeb4c08c71210d4fc15bc54bd69c258977ba3"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.22/MediaNetRendererPrebid.xcframework.zip",
+            checksum: "af7ef63e771920941e5d1806c49e242cb53cf75aa0078d1216bc4a542e08e6bc"
         ),
         .binaryTarget(
             name: "MediaNetRendererAdSDK",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.21/MediaNetRendererAdSDK.xcframework.zip",
-            checksum: "dbf18de98a951dd0b8ae2b30f548374c9ba630db9a22739811bc67a6aa78fbd9"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.0.22/MediaNetRendererAdSDK.xcframework.zip",
+            checksum: "7e3ba6de91a1586d8c11febd4d6f540c9137f1138b675fd4a7814b95892c0413"
         ),
         // MNR-RELEASE-END
     ]
