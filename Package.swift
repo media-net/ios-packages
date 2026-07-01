@@ -1,5 +1,5 @@
 // swift-tools-version: 5.9
-// MediaNetAdSDK — version 0.4.6
+// MediaNetAdSDK — version 0.4.7
 
 import PackageDescription
 
@@ -46,15 +46,15 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MediaNetAdSDK",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.4.6/MediaNetAdSDK.xcframework.zip",
-            checksum: "2de8e69527a13135357b69263204c156d059f3d00ffecf60597ed5fc5d32beeb"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.4.7/MediaNetAdSDK.xcframework.zip",
+            checksum: "a31c5421b3c2c7ef7dea6faced5e5a5c2d0d66536518deaede1ba773e3873a1a"
         ),
         // Namespaced Prebid Mobile fork the wrapper links. Hosted here because a
         // binary target cannot bundle another binary's dependencies.
         .binaryTarget(
             name: "MNPrebidMobile",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.4.6/MNPrebidMobile.xcframework.zip",
-            checksum: "41cefc59e995b88292d193e38283065190fb47ebbabdafe14b5ae5925cea2a26"
+            url: "https://github.com/media-net/ios-packages/releases/download/v0.4.7/MNPrebidMobile.xcframework.zip",
+            checksum: "62f54bdcb246fad585431af11be12d85039bed47ab0e64e9a4882fc550c18203"
         ),
         // Dynamic IAB OMSDK build (independently versioned, already hosted).
         .binaryTarget(
