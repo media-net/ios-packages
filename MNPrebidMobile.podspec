@@ -1,3 +1,5 @@
+# FROZEN at 0.4.7 — this repo is renderer-only since the 2026-07 repo split.
+# New MediaNetAdSDK/MNPrebidMobile versions live at https://github.com/media-net/MediaNetAdSDK-dist
 Pod::Spec.new do |s|
   s.name             = 'MNPrebidMobile'
   s.version          = '0.4.7'
