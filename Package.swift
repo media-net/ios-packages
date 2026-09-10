@@ -1,5 +1,5 @@
 // swift-tools-version: 5.9
-// MediaNetRenderer — version 0.5.0
+// MediaNetRenderer — version 1.0.0
 //
 // RENDERER-ONLY distribution manifest (repo split, >= 0.5.0):
 //   - MediaNetAdSDK wrapper releases: https://github.com/media-net/MediaNetAdSDK-dist
@@ -47,24 +47,24 @@ let package = Package(
         // Wrapper SDK — required by the MediaNetRendererAdSDK flavor's binary.
         .package(
             url: "https://github.com/media-net/MediaNetAdSDK-dist",
-            from: "0.4.8"
+            from: "1.0.0"
         )
     ],
     targets: [
         .binaryTarget(
             name: "MediaNetRendererCore",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.5.0/MediaNetRendererCore.xcframework.zip",
-            checksum: "5c9c5882f4f3c9ad5ce251b74ad9ef456771407acd41364db98a294619843d3d"
+            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.0/MediaNetRendererCore.xcframework.zip",
+            checksum: "cc647675e877388ed08d387637004aeab4ec429f30343620a0d46de9a55f7f80"
         ),
         .binaryTarget(
             name: "MediaNetRendererPrebid",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.5.0/MediaNetRendererPrebid.xcframework.zip",
-            checksum: "1fb9bf25a21361b01b555edef96ca48beaed3a70fe518880f2752ba97766d481"
+            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.0/MediaNetRendererPrebid.xcframework.zip",
+            checksum: "70547775fda308e81560ae490b8528986a6a6bfc41f21c28254550e0741b4118"
         ),
         .binaryTarget(
             name: "MediaNetRendererAdSDK",
-            url: "https://github.com/media-net/ios-packages/releases/download/v0.5.0/MediaNetRendererAdSDK.xcframework.zip",
-            checksum: "69b9168cb788c78b1764d16d058fe962e10fce79b7f8c9b7d4d063663fafb539"
+            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.0/MediaNetRendererAdSDK.xcframework.zip",
+            checksum: "7223c5cfdfb42ba3bf4dbccba5042533f6b4128828836917d14e03a63bf4fac7"
         ),
         // Carries the OMSDK_Medianet package edge (dynamic OMID, embedded once).
         .target(
