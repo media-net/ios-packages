@@ -1,12 +1,12 @@
 Pod::Spec.new do |s|
   s.name             = 'MediaNetRendererCore'
-  s.version          = '1.0.2'
+  s.version          = '1.0.3'
   s.summary          = 'Prebid-ignorant rendering core for the Media.net renderer.'
   s.homepage         = 'https://github.com/media-net/ios-packages'
   s.license          = { :type => 'Commercial' }
   s.author           = { 'Media.net' => 'mobile@media.net' }
   s.platform         = :ios, '14.0'
-  s.source           = { :http => 'https://github.com/media-net/ios-packages/releases/download/v1.0.2/MediaNetRendererCore.xcframework.zip' }
+  s.source           = { :http => 'https://github.com/media-net/ios-packages/releases/download/v1.0.3/MediaNetRendererCore.xcframework.zip' }
   s.vendored_frameworks = 'MediaNetRendererCore.xcframework'
   s.static_framework = true
   # Static frameworks don't carry their flat resources into the host app, so the

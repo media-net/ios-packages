@@ -1,5 +1,5 @@
 // swift-tools-version: 5.9
-// MediaNetRenderer — version 1.0.2
+// MediaNetRenderer — version 1.0.3
 //
 // RENDERER-ONLY distribution manifest (repo split, >= 0.5.0):
 //   - MediaNetAdSDK wrapper releases: https://github.com/media-net/MediaNetAdSDK-dist
@@ -53,18 +53,18 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "MediaNetRendererCore",
-            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.2/MediaNetRendererCore.xcframework.zip",
-            checksum: "24f1c9464a6277b4162190be25f656a91607648f924a9bcfa40411456e9f7c6d"
+            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.3/MediaNetRendererCore.xcframework.zip",
+            checksum: "e212beac98c41f404b6ccc59ae1a686291d795bc86672de11e6573645bb63d6c"
         ),
         .binaryTarget(
             name: "MediaNetRendererPrebid",
-            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.2/MediaNetRendererPrebid.xcframework.zip",
-            checksum: "8851ae922e398418354624b2238729a666d0528630cad51f02866a3456e14a9a"
+            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.3/MediaNetRendererPrebid.xcframework.zip",
+            checksum: "0c7cd2f86fc84e880a46215a4f07acb5c4773c2caded78e21e9b3aa236f26aba"
         ),
         .binaryTarget(
             name: "MediaNetRendererAdSDK",
-            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.2/MediaNetRendererAdSDK.xcframework.zip",
-            checksum: "11648bad8bb3fe148864870b44364b02ed17bbfd4f1e4b0f75721ff0cd2995e8"
+            url: "https://github.com/media-net/ios-packages/releases/download/v1.0.3/MediaNetRendererAdSDK.xcframework.zip",
+            checksum: "27441d3caf560c4fd27715c886afa67454411f28dbc1fcab686d15ba9c30ac7c"
         ),
         // Carries the OMSDK_Medianet package edge (dynamic OMID, embedded once).
         .target(
